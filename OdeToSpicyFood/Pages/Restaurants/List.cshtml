@@ -1,0 +1,25 @@
+﻿@page
+@model OdeToSpicyFood.ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List of Restaurants</h1>
+
+<table class="table">
+    <tr class="table-success">
+        <td>Name</td>
+        <td>Location</td>
+        <td>Cuisine</td>
+        <td>Rating</td>
+    </tr>
+    @foreach(var restaurant in Model.Restaurants)
+    {
+        <tr>
+            <td>@restaurant.Name</td>
+            <td>@restaurant.Location</td>
+            <td>@restaurant.Cuisine</td>
+            <td>@restaurant.Rating</td>
+        </tr>
+    }
+</table>
