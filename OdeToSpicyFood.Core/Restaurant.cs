@@ -17,6 +17,7 @@ namespace OdeToSpicyFood.Core
 
         [Required]
         public double Rating { get; set; }
+
         public CuisineType Cuisine { get; set; }
     }
 }

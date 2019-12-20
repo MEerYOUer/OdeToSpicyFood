@@ -60,7 +60,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 150px;
 }
 .footer {
   position: absolute;
@@ -68,4 +68,36 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+#welcome {
+    margin-bottom: 40px;
+    color: white;
+}
+
+.bg-img-1 {
+    background-image: url("../images/chilis-edit2.png");
+    background-color: #1b6ec2;
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.custom-container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.icon-size {
+    font-size: 90px;
+    color: #e5c200;
+}
+
+#spicy-carousel {
+    padding-top: 75px;
+    padding-bottom: 75px;
 }

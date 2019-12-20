@@ -1,43 +1,36 @@
 ﻿@page
 @model OdeToSpicyFood.ListModel
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Restaurants";
 }
-<h1>List of Restaurants</h1>
 
-<form method="get">
-    <div class="form-group">
-        <div class="input-group">
-            <input type="search" class="form-control" asp-for="SearchTerm"/>
-            <div class="input-group-append">
-                <button class="btn btn-secondary">
-                    <i class="fas fa-search"></i>
-                </button>
+<div class="container">
+    <h1 class="mt-sm-4 mb-sm-4">List of Restaurants</h1>
+    <div class="mb-sm-4">
+        <a asp-page=".\Edit" class="btn btn-dark">Add New</a>
+        <a asp-page=".\ClientRestaurant" class="btn btn-info">View Alternate List (jQuery)</a>
+    </div>
+       
+    <form method="get">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="search" class="form-control" asp-for="SearchTerm" />
+                <div class="input-group-append">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
         </div>
+    </form>
+    <div class="d-flex flex-row flex-wrap">
+        @foreach (var restaurant in Model.Restaurants)
+        {
+            <partial name="_Summary" model="restaurant" />
+        }
     </div>
-</form>
-
-<table class="table">
-    <tr class="table-success">
-        <td>Name</td>
-        <td>Location</td>
-        <td>Cuisine</td>
-        <td>Rating</td>
-        <td></td>
-        <td></td>
-    </tr>
-    @foreach(var restaurant in Model.Restaurants)
-    {
-        <tr>
-            <td>@restaurant.Name</td>
-            <td>@restaurant.Location</td>
-            <td>@restaurant.Cuisine</td>
-            <td>@restaurant.Rating</td>
-            <td><a class="fas fa-search-plus" asp-page="./Detail" asp-route-restaurantId="@restaurant.Id"></a></td>
-            <td><a class="fas fa-edit" asp-page="./Edit" asp-route-restaurantId="@restaurant.Id"></a></td>
-        </tr>
-    }
-</table>
-
-<a asp-page=".\Edit" class="btn btn-dark">Add New</a>
+    <div>
+        <a asp-page=".\Edit" class="btn btn-dark">Add New</a>
+        <a asp-page=".\ClientRestaurant" class="btn btn-info">View Alternate List (jQuery)</a>
+    </div>
+</div>

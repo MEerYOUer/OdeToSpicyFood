@@ -4,20 +4,22 @@
     ViewData["Title"] = "Detail";
 }
 
-<h1>@Model.Restaurant.Name</h1>
-<div>
-    Location: @Model.Restaurant.Location
-</div>
-<div>
-    Cuisine: @Model.Restaurant.Cuisine
-</div>
-<div>
-    Rating: @Model.Restaurant.Rating
-</div>
+<div class="container">
+    <h1>@Model.Restaurant.Name</h1>
+    <div>
+        Location: @Model.Restaurant.Location
+    </div>
+    <div>
+        Cuisine: @Model.Restaurant.Cuisine
+    </div>
+    <div>
+        Rating: @Model.Restaurant.Rating
+    </div>
 
-@if(Model.Message != null)
-{
-    <div class="alert alert-info">@Model.Message</div>
-}
+    @if (Model.Message != null)
+    {
+        <div class="alert alert-info">@Model.Message</div>
+    }
 
-<a asp-page="./List" class="btn btn-outline-dark">All Restaurants</a>
+    <a asp-page="./List" class="btn btn-outline-dark">All Restaurants</a>
+</div>

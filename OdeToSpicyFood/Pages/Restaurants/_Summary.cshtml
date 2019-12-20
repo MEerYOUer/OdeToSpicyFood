@@ -1,0 +1,25 @@
+﻿@using OdeToSpicyFood.Core
+@model Restaurant
+
+<div class="card m-sm-4" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h4>@Model.Name</h4>
+        <div>
+            <span class="font-weight-bold">Location:</span>
+            @Model.Location
+        </div>
+        <div>
+            <span class="font-weight-bold">Cuisine:</span>
+            @Model.Cuisine</div>
+        <div>
+            <span class="font-weight-bold">Rating:</span>
+            @Model.Rating
+        </div>
+    </div>
+    <div class="card-footer">
+        <a class="fas fa-search-plus" style="margin-right:10px;" asp-page="./Detail" asp-route-restaurantId="@Model.Id"></a>
+        <a class="fas fa-edit" style="margin-right:10px;color:#058100" asp-page="./Edit" asp-route-restaurantId="@Model.Id"></a>
+        <a class="fas fa-trash" style="margin-right:10px;color:#8b0000" asp-page="./Delete" asp-route-restaurantId="@Model.Id"></a>
+    </div>
+</div>
