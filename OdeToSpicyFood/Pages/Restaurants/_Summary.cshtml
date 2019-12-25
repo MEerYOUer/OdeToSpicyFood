@@ -1,13 +1,12 @@
 ﻿@using OdeToSpicyFood.Core
 @model Restaurant
 
-<div class="card m-sm-4" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+<div class="card list-cards">
     <div class="card-body">
         <h4>@Model.Name</h4>
         <div>
             <span class="font-weight-bold">Location:</span>
-            @Model.Location
+            @Model.Street, @Model.City @Model.State @Model.Zip
         </div>
         <div>
             <span class="font-weight-bold">Cuisine:</span>

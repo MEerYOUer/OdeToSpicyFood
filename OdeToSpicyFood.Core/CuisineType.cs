@@ -8,6 +8,7 @@
         Chinese,
         Japanese,
         Italian,
-        Indian
+        Indian,
+        Mediterranean
     }
 }

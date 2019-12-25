@@ -13,7 +13,16 @@ namespace OdeToSpicyFood.Core
         public string Name { get; set; }
 
         [Required]
-        public string Location { get; set; }
+        public string Street { get; set; }
+
+        [Required]
+        public string City { get; set; }
+
+        [Required]
+        public string State { get; set; }
+
+        [Required]
+        public int Zip { get; set; }
 
         [Required]
         public double Rating { get; set; }

@@ -32,6 +32,10 @@
     <ProjectReference Include="..\OdeToSpicyFood.Data\OdeToSpicyFood.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\restaurants\" />
+  </ItemGroup>
+
 
 
 </Project>

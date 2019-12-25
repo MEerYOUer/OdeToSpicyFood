@@ -101,3 +101,40 @@ body {
     padding-top: 75px;
     padding-bottom: 75px;
 }
+
+#index-icons {
+    margin-top: 110px;
+    margin-bottom: 150px;
+}
+
+#nav-shadow {
+    background-color: #212121;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,.25);
+    border-bottom: solid 1px ##2b2b2b;
+}
+
+#index-button {
+    background-color: #212121;
+}
+
+.spec-container {
+    max-width: 70%;
+}
+
+.list-cards {
+    margin: 1rem 1.5rem 1rem 1.5rem;
+    width: 20rem;
+}
+
+.title-margins {
+    margin-top: 100px;
+}
+
+/* leafletJS */
+#mapid {
+    height: 400px;
+}
+
+.index-font {
+    font-family: 'PT Serif', serif;
+}

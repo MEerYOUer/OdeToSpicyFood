@@ -5,21 +5,43 @@
 }
 
 <div class="container">
-    <h1>@Model.Restaurant.Name</h1>
+    <h1 class="title-margins mb-sm-4">@Model.Restaurant.Name</h1>
+    <input type="hidden" asp-for="Restaurant.Id" id="restaurantId"/>
     <div>
-        Location: @Model.Restaurant.Location
+        <span class="font-weight-bold">Location:</span>
+        @Model.Restaurant.Street, @Model.Restaurant.City @Model.Restaurant.State, @Model.Restaurant.Zip
     </div>
     <div>
-        Cuisine: @Model.Restaurant.Cuisine
+        <span class="font-weight-bold">Cuisine:</span>
+        @Model.Restaurant.Cuisine
     </div>
     <div>
-        Rating: @Model.Restaurant.Rating
+        <span class="font-weight-bold">Rating:</span>
+        @Model.Restaurant.Rating
     </div>
 
     @if (Model.Message != null)
     {
-        <div class="alert alert-info">@Model.Message</div>
+        <div class="alert alert-success mt-sm-3 mb-sm-3">@Model.Message</div>
     }
 
-    <a asp-page="./List" class="btn btn-outline-dark">All Restaurants</a>
+    <div class="mt-2 mb-4">
+        <a class="btn btn-outline-dark" asp-page="./List"><i class="fas fa-arrow-left pr-2"></i>All Restaurants</a>
+        <a class="btn btn-dark" asp-page="./Edit" asp-route-restaurantId="@Model.Restaurant.Id">Edit</a>
+        <a class="btn btn-danger" asp-page="./Delete" asp-route-restaurantId="@Model.Restaurant.Id">Delete</a>
+    </div>
+
+    <div id="mapid" class="mt-4">
+            <button class="btn btn-dark btn-lg h-100 w-100" id="mapBtn">See Map</button>
+    </div>
 </div>
+
+
+
+@section Scripts {
+    <script src="~/js/Detail.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+    <script src="~/js/Detail.js"></script>
+}

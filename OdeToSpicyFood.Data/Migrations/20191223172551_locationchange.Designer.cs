@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OdeToSpicyFood.Data;
 
 namespace OdeToSpicyFood.Data.Migrations
 {
     [DbContext(typeof(OdeToSpicyFoodDbContext))]
-    partial class OdeToSpicyFoodDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191223172551_locationchange")]
+    partial class locationchange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

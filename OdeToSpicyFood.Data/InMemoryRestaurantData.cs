@@ -13,12 +13,9 @@ namespace OdeToSpicyFood.Data
         {
             restaurants = new List<Restaurant>()
             {
-                new Restaurant { Id = 1, Name = "Spice R Us", Location = "Ohio", Rating = 4.5, Cuisine = CuisineType.American },
-                new Restaurant { Id = 2, Name = "Sunflower", Location = "California", Rating = 4.2, Cuisine = CuisineType.Chinese },
-                new Restaurant { Id = 3, Name = "Three Fat Indians", Location = "New York", Rating = 4.7, Cuisine = CuisineType.Indian },
-                new Restaurant { Id = 4, Name = "Jalapenoooo", Location = "Alabama", Rating = 3.2, Cuisine = CuisineType.Mexican },
-                new Restaurant { Id = 5, Name = "Numi Numi", Location = "Oregon", Rating = 4.6, Cuisine = CuisineType.Japanese },
-                new Restaurant { Id = 6, Name = "Lorenzo's Pizzeria", Location = "Ohio", Rating = 4.8, Cuisine = CuisineType.Italian }
+                new Restaurant { Id = 1, Name = "Curry Up Indian Grill", Street = "6181 Sawmill Rd", City = "Dublin", State = "OH", Zip = 43215, Rating = 4.2, Cuisine = CuisineType.Indian },
+                new Restaurant { Id = 1, Name = "Hot Chicken Takeover", Street = "59 Spruce St", City = "Columbus", State = "OH", Zip = 43212, Rating = 4.4, Cuisine = CuisineType.American },
+                new Restaurant { Id = 1, Name = "Fukuryu Ramen", Street = "4540 Bridge Park Ave", City = "Dublin", State = "OH", Zip = 43017, Rating = 4.6, Cuisine = CuisineType.Japanese },
             };
         }
 
@@ -41,7 +38,10 @@ namespace OdeToSpicyFood.Data
             if(restaurant != null)
             {
                 restaurant.Name = updatedRestaurant.Name;
-                restaurant.Location = updatedRestaurant.Location;
+                restaurant.Street = updatedRestaurant.Street;
+                restaurant.City = updatedRestaurant.City;
+                restaurant.State = updatedRestaurant.State;
+                restaurant.Zip = updatedRestaurant.Zip;
                 restaurant.Rating = updatedRestaurant.Rating;
                 restaurant.Cuisine = updatedRestaurant.Cuisine;
             }

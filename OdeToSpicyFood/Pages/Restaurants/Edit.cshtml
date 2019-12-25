@@ -5,19 +5,44 @@
 }
 
 <div class="container">
-    <h1>Editing @Model.Restaurant.Name</h1>
+    @if (Model.Restaurant.Name != null)
+    {
+        <h1 class="title-margins mb-sm-4">Edit @Model.Restaurant.Name</h1>
+    }
+    else
+    {
+        <h1 class="title-margins mb-sm-4">Add New Restaurant</h1>
+    }
+
 
     <form method="post">
         <input type="hidden" asp-for="Restaurant.Id" />
         <div class="form-group">
             <label asp-for="Restaurant.Name"></label>
-            <input asp-for="Restaurant.Name" class="form-control" />
+            <input asp-for="Restaurant.Name" class="form-control" placeholder="Name" />
             <span class="text-danger" asp-validation-for="Restaurant.Name"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Restaurant.Location"></label>
-            <input asp-for="Restaurant.Location" class="form-control" />
-            <span class="text-danger" asp-validation-for="Restaurant.Location"></span>
+            <label asp-for="Restaurant.Street"></label>
+            <input asp-for="Restaurant.Street" class="form-control" placeholder="Street" />
+            <span class="text-danger" asp-validation-for="Restaurant.Street"></span>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Restaurant.City"></label>
+                <input asp-for="Restaurant.City" class="form-control" placeholder="City" />
+                <span class="text-danger" asp-validation-for="Restaurant.City"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Restaurant.State"></label>
+                <input asp-for="Restaurant.State" class="form-control" />
+                <span class="text-danger" asp-validation-for="Restaurant.State"></span>
+            </div>
+            <div class="form-group col-md-2">
+                <label asp-for="Restaurant.Zip"></label>
+                <input asp-for="Restaurant.Zip" class="form-control" />
+                <span class="text-danger" asp-validation-for="Restaurant.Zip"></span>
+            </div>
         </div>
         <div class="form-group">
             <label asp-for="Restaurant.Cuisine"></label>
@@ -31,9 +56,9 @@
         </div>
 
         <button type="submit" class="btn btn-dark">Save</button>
+        <a class="btn btn-danger" asp-page="./List">Cancel</a>
     </form>
-
-    @section Scripts {
-        <partial name="_ValidationScriptsPartial" />
-    }
 </div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
