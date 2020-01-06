@@ -69,3 +69,82 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+#welcome {
+    margin-bottom: 40px;
+    color: white;
+}
+
+.bg-img-1 {
+    background-image: url("../images/chilis-edit2.png");
+    background-color: #1b6ec2;
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.custom-container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.icon-size {
+    font-size: 90px;
+    color: #e5c200;
+}
+
+#spicy-carousel {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#index-icons {
+    margin-top: 110px;
+    margin-bottom: 150px;
+}
+
+#nav-shadow {
+    background-color: #212121;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,.25);
+    border-bottom: solid 1px ##2b2b2b;
+}
+
+#index-button {
+    background-color: #212121;
+}
+
+.spec-container {
+    max-width: 70%;
+}
+
+.list-cards {
+    margin: 1rem 1.5rem 1rem 1.5rem;
+    width: 20rem;
+}
+
+.title-margins {
+    margin-top: 100px;
+}
+
+#mapid {
+    height: 400px;
+}
+
+.index-font {
+    font-family: 'PT Serif', serif;
+}
+
+/*.about-list:hover {
+    background-color: #e4f1ff;
+}*/
+
+.list-cards:hover {
+    background-color: #f7f7f7;
+    color: #000000;
+    transition: all .2s ease;
+}
+

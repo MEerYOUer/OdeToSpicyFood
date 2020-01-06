@@ -130,7 +130,6 @@ body {
     margin-top: 100px;
 }
 
-/* leafletJS */
 #mapid {
     height: 400px;
 }
@@ -138,3 +137,14 @@ body {
 .index-font {
     font-family: 'PT Serif', serif;
 }
+
+/*.about-list:hover {
+    background-color: #e4f1ff;
+}*/
+
+.list-cards:hover {
+    background-color: #f7f7f7;
+    color: #000000;
+    transition: all .2s ease;
+}
+

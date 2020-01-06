@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
@@ -12,7 +13,15 @@ namespace OdeToSpicyFood
     public class Program
     {
         public static void Main(string[] args) {
-            CreateHostBuilder(args).Build().Run();
+            try
+            {
+                CreateHostBuilder(args).Build().Run();
+            }
+            catch (DirectoryNotFoundException dirEx)
+            {
+                Console.WriteLine("Directory not found: " + dirEx.Message);
+            }
+            
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

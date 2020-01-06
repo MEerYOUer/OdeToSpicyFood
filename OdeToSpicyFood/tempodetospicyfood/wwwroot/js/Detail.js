@@ -15,12 +15,10 @@
                 let address = response.street + "+" + response.city + "+" + response.state + "+" + response.zip;
                 let urlAddress = address.replace(/\s/g, "+");
 
-                console.log(address + ", " + urlAddress); // test
-
                 getCoordinates(urlAddress);
             },
             error: function (xhr, status, error) {
-                console.log(id + " "); // test
+                console.log(id + " ");
                 console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
             }
         });
@@ -34,8 +32,6 @@
             success: function (response, status, xhr) {
                 let lat = response.Response.View[0].Result[0].Location.DisplayPosition.Latitude;
                 let long = response.Response.View[0].Result[0].Location.DisplayPosition.Longitude;
-
-                console.log(lat + ", " + long); // test
 
                 getMap(lat, long);
             },

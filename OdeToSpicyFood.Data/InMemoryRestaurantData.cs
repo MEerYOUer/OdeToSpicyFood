@@ -14,8 +14,8 @@ namespace OdeToSpicyFood.Data
             restaurants = new List<Restaurant>()
             {
                 new Restaurant { Id = 1, Name = "Curry Up Indian Grill", Street = "6181 Sawmill Rd", City = "Dublin", State = "OH", Zip = 43215, Rating = 4.2, Cuisine = CuisineType.Indian },
-                new Restaurant { Id = 1, Name = "Hot Chicken Takeover", Street = "59 Spruce St", City = "Columbus", State = "OH", Zip = 43212, Rating = 4.4, Cuisine = CuisineType.American },
-                new Restaurant { Id = 1, Name = "Fukuryu Ramen", Street = "4540 Bridge Park Ave", City = "Dublin", State = "OH", Zip = 43017, Rating = 4.6, Cuisine = CuisineType.Japanese },
+                new Restaurant { Id = 2, Name = "Hot Chicken Takeover", Street = "59 Spruce St", City = "Columbus", State = "OH", Zip = 43212, Rating = 4.4, Cuisine = CuisineType.American },
+                new Restaurant { Id = 3, Name = "Fukuryu Ramen", Street = "4540 Bridge Park Ave", City = "Dublin", State = "OH", Zip = 43017, Rating = 4.6, Cuisine = CuisineType.Japanese },
             };
         }
 
